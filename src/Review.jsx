@@ -59,7 +59,7 @@ const Review = ({ review }) => {
         <div className="reviewer-info">
           <div className="name">{review.reviewer_name}</div>
           <span style={{ opacity: '.8' }}>wrote a review at</span>
-          <div className="name">{review.hotel_code}</div>
+          <div className="name">{review.source.name}</div>
         </div>
         <div className="icons">
           <i className="fa-regular fa-user"></i>
