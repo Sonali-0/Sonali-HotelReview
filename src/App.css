@@ -1,38 +1,211 @@
-.App {
+body
+{
+  padding:10px 50px;
+}
+.heading
+{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.review-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius:4px;
+  background-color:#f0f8ff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.reviewer-info span {
+  margin: 0 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.review-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap; /* Allow header content to wrap */
 }
 
-.App-link {
-  color: #61dafb;
+.icon {
+   padding:6px;
+   margin-right: 10px;
+   border: 0.5px solid black;
+   border-radius:50% ;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.icon i{
+    padding:5px;
+    align-items:centre;
+    display:flex;
   }
-  to {
-    transform: rotate(360deg);
+.reviewer-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 10px; /* Add padding to align with other elements */
+}
+
+.reviewer-info p {
+  padding: 5px;
+  margin: 0; /* Reset margin for better spacing */
+  font-size:40px;
+}
+.name {
+    font-weight: bold;
+  }
+.icons {
+  margin-left: auto;
+  display: flex; 
+}
+
+.icons i {
+  margin-left: 5px;
+  margin: 15px;
+}
+
+.review-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  height: 20px;
+  border-radius: 25px;
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: yellow;
+  border-radius: 25px;
+}
+
+.rating-score {
+  margin-left: 10px;
+}
+
+.review-date {
+  margin-left: 10px;
+}
+
+.review-content {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .review-header {
+    flex-wrap: wrap;
+  }
+
+  .reviewer-info {
+    padding-left: 50px;
+    margin-top: -32px;
+    flex-basis: 100%;
+    font-size: 12px;
+  }
+
+  .name {
+    font-weight: bold;
+    font-size:15px;
+  }
+
+  .reviewer-info p {
+    margin-top: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .icon {
+   
+         padding: 6px;
+        font-size: 17px;
+        width: 20px;
+        height: 20px;
+  }
+  .icon i{
+    padding:1px;
+    align-items:centre;
+    display:flex;
+  }
+  .icons {
+    margin-left: auto;
+    margin-top: -30px;
+  }
+
+  .icons i {
+    margin: 7px;
+   
+  }
+
+  .review-rating,
+  .rating-score
+   {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  
+  .reviewer-info {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .review-header {
+    flex-wrap: wrap;
+  }
+
+  .reviewer-info {
+    padding-left: 30px;
+    margin-top: -22px;
+    flex-basis: 100%;
+    font-size: 12px;
+  }
+
+  .name {
+    font-weight: bold;
+    font-size:10px;
+  }
+
+  .reviewer-info p {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .icon {
+    
+       padding: 4px;
+        font-size: 12px;
+        width: 14px;
+        height: 14px;
+  }
+
+  .icons {
+    margin-left: auto;
+    margin-top: -30px;
+  }
+
+  .icons i {
+    margin: 5px;
+  }
+
+  .review-rating,
+  .rating-score
+   {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  .review-date{
+    font-size:12px;
+  }
+  .reviewer-info {
+    flex-basis: 100%;
   }
 }
